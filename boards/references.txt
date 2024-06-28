@@ -1,0 +1,2 @@
+- esp32-s3-WROOM-1-n16r8v.json is from the following Git commit by Paul Hindt (handledexception):
+    https://github.com/platformio/platform-espressif32/blob/deb6aa342245ad7bcb3d9ed69050f203779833ab/boards/esp32-s3-devkitc-1-n16r8v.json
