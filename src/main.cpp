@@ -2,7 +2,7 @@
 #include <Arduino_GFX_Library.h>
 #include <Arduino_GFX.h>
 
-#include "nightlatch.h"
+#include "nightlatch.hpp"
 
 // Setup display driver (Arduino_GFX)
 Arduino_ESP32RGBPanel *bus = new Arduino_ESP32RGBPanel(
