@@ -5,6 +5,7 @@ NightLatch stores all data encrypted locally on a microSD card making its attack
 
 ## Acknowledgements
 NightLatch would not be possible without the following open-source projects:
+- [gt911-arduino](https://github.com/arduino12/gt911-arduino)
 - [Arduino_GFX](https://github.com/moononournation/Arduino_GFX)
 - [LVGL](https://github.com/lvgl/lvgl)
 - [Various Arduino Libraries](https://github.com/arduino-libraries)

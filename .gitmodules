@@ -1,0 +1,3 @@
+[submodule "lib/gt911-arduino"]
+	path = lib/gt911-arduino
+	url = https://github.com/arduino12/gt911-arduino.git
