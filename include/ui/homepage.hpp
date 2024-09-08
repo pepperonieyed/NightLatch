@@ -1,5 +1,5 @@
-#ifndef NIGHTLATCH_INC_UI
-#define NIGHTLATCH_INC_UI
+#ifndef NIGHTLATCH_INC_UI_HOMEPAGE
+#define NIGHTLATCH_INC_UI_HOMEPAGE
 
 #include <lvgl.h>
 

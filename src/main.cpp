@@ -5,8 +5,10 @@
 
 #include "nightlatch.hpp"
 #include "touch.hpp"
+#include "sd_card.hpp"
 #include "ui/styles.hpp"
 #include "ui/homepage.hpp"
+#include "ui/sd_error.hpp"
 
 /*
  * flush_display
@@ -74,7 +76,8 @@ void setup(void) {
   // Init styles
   styles_init();
 
-  show_homepage();
+  // Check if SD card inserted
+  sdcard_init() ? show_homepage() : show_sd_error();
 }
 
 void loop(void) {
