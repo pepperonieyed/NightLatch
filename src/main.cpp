@@ -67,7 +67,7 @@ void setup(void) {
   );
 
   touch_screen->begin();
-  touch_screen->setRotation(ROTATION_LEFT);
+  touch_screen->setRotation(ROTATION_RIGHT);
 
   lv_indev_t *indev = lv_indev_create();
   lv_indev_set_type(indev, LV_INDEV_TYPE_POINTER);
