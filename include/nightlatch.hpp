@@ -3,8 +3,8 @@
 
 #include <lvgl.h>
 #include <TAMC_GT911.h>
-
-#define NIGHTLATCH_VERSION "0.0.3"
+#include <Arduino_GFX_Library.h>
+#include <Arduino_GFX.h>
 
 #define DISP_BL_PIN 2
 #define DISP_WIDTH 800
