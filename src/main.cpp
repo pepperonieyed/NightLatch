@@ -57,7 +57,11 @@ void setup(void) {
 
   display = lv_display_create(gfx->width(), gfx->height());
   lv_display_set_flush_cb(display, flush_display);
-  lv_display_set_buffers(display, draw_buffer, NULL, sizeof(draw_buffer), LV_DISPLAY_RENDER_MODE_PARTIAL);
+
+  uint32_t buffer_size = DISP_HEIGHT * DISP_WIDTH * lv_color_format_get_size(lv_display_get_color_format(display)) / 10;
+  draw_buf_1 = (lv_color_t*)heap_caps_malloc(sizeof(lv_color_t) * buffer_size, MALLOC_CAP_DMA | MALLOC_CAP_INTERNAL);
+  draw_buf_2 = (lv_color_t*)heap_caps_malloc(sizeof(lv_color_t) * buffer_size, MALLOC_CAP_DMA | MALLOC_CAP_INTERNAL);
+  lv_display_set_buffers(display, draw_buf_1, draw_buf_2, buffer_size, LV_DISPLAY_RENDER_MODE_PARTIAL);
 
   // Setup touchscreen
   // Width and height are inverted due to portrait mode
@@ -72,6 +76,8 @@ void setup(void) {
   lv_indev_t *indev = lv_indev_create();
   lv_indev_set_type(indev, LV_INDEV_TYPE_POINTER);
   lv_indev_set_read_cb(indev, read_touchscreen);
+
+  lv_obj_set_style_bg_color(lv_screen_active(), lv_color_hex(0x1C2133), LV_STATE_DEFAULT);
 
   // Init styles
   styles_init();

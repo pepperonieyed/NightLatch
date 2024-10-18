@@ -15,9 +15,8 @@ Arduino_RGB_Display *gfx;
 
 lv_display_t *display;
 
-// LVGL draw buffer (1/10 of screen size due to partial rendering)
-#define DRAW_BUFFER_SIZE (DISP_WIDTH * DISP_HEIGHT / 10)
-uint32_t draw_buffer[DRAW_BUFFER_SIZE];
+static lv_color_t *draw_buf_1;
+static lv_color_t *draw_buf_2;
 
 void flush_display(lv_display_t, const lv_area_t*, uint8_t*);
 uint32_t tick(void);
