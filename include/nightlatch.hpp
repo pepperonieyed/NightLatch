@@ -6,9 +6,9 @@
 #include <Arduino_GFX_Library.h>
 #include <Arduino_GFX.h>
 
-#define DISP_BL_PIN 2
-#define DISP_WIDTH 800
-#define DISP_HEIGHT 480
+constexpr uint8_t DISP_BL_PIN = 2;
+constexpr uint16_t DISP_WIDTH = 800;
+constexpr uint16_t DISP_HEIGHT = 480;
 
 Arduino_ESP32RGBPanel *bus;
 Arduino_RGB_Display *gfx;
